@@ -1,0 +1,112 @@
+﻿<Window x:Class="DataTransform.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:xced ="http://schemas.xceed.com/wpf/xaml/avalondock"
+		xmlns:local="clr-namespace:DataTransform"
+		xmlns:localview="clr-namespace:DataTransform.View"
+		xmlns:i="clar-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+		xmlns:winformsIntegration="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+		mc:Ignorable="d"
+		WindowState="Maximized"
+		Title="Learning WPF" Height="480" Width="700">
+	<Grid x:Name="MainGrid">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		
+		<!-- Menu Section -->
+		<Menu Grid.Row="0">
+			<MenuItem Header="Repository">
+				<MenuItem Command="New" />
+				<MenuItem Command="{Binding Connect}" />
+			</MenuItem>
+			<MenuItem Header="Schema">
+				<MenuItem Command="Copy" />
+				<MenuItem Command="Paste" />
+			</MenuItem>
+			<MenuItem Header="Transformation">
+				<MenuItem Command="Cut" />
+				<MenuItem Command="Undo" />
+			</MenuItem>
+		</Menu>
+		
+		<xced:DockingManager x:Name="dockManager"
+							 Grid.Row="1"
+							 AllowMixedOrientation="True"
+							 AnchorablesSource="{Binding DockablePanelViewModel}"
+							 Background="{StaticResource MainWindowBgBrush}"
+							 GridSplitterHeight="3"
+							 GridSplitterWidth="3"
+							 OnDocumentPanelCreated="OnDocumentPanelCreated"
+							 PanelBorderBrush="{StaticResource DockBorderBrush}"
+							 PanelBorderThickness="1"
+							 PreviewMouseDown="PreviewMouseDown">
+			<xced:DockingManager.Theme>
+				<xced:GenericTheme />
+			</xced:DockingManager.Theme>
+			<xced:DockingManager.DocumentHeaderTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal">
+						<Image Source="{Binding IconSource}" Margin="0,0,4,0"/>
+						<TextBlock Text="{Binding Title}" TextTrimming="CharacterEllipsis"/>
+					</StackPanel>
+				</DataTemplate>
+			</xced:DockingManager.DocumentHeaderTemplate>
+			<xced:LayoutRoot x:Name="PART_LayoutRoot">
+				<xced:LayoutPanel Orientation="Horizontal">
+					<xced:LayoutAnchorablePane DockWidth="100">
+						<xced:LayoutAnchorable x:Name="WinFormsWindow"  ContentId="WinFormsWindow" Title="WinForms Window" ToolTip="My WinForms Tool" CanHide="False" CanClose="False" >
+							<winformsIntegration:WindowsFormsHost x:Name="winFormsHost" Background="White"/>
+						</xced:LayoutAnchorable>
+					</xced:LayoutAnchorablePane>
+					<xced:LayoutDocumentPaneGroup>
+						<xced:LayoutDocumentPane>
+							<xced:LayoutDocument ContentId="document1" Title="Document 1" IconSource="/DataTransform;component/Theme/Images/alarm-clock-blue.png" >
+								<StackPanel>
+									<TextBox Text="Document 1 Content"/>
+									<Button Content="Click to add 2 documents" Click="AddTwoDocuments_click"/>
+								</StackPanel>
+							</xced:LayoutDocument>
+							<xced:LayoutDocument ContentId="document2" Title="Document 2">
+								<TextBox Text="{Binding TestTimer, Mode=OneWay, StringFormat='Document 2 Attached to Timer ->\{0\}'}"/>
+							</xced:LayoutDocument>
+						</xced:LayoutDocumentPane>
+					</xced:LayoutDocumentPaneGroup>
+					<xced:LayoutAnchorablePaneGroup DockWidth="150">
+						<xced:LayoutAnchorablePane>
+							<xced:LayoutAnchorable ContentId="toolWindow1" Title="Tool Window 1" Hiding="OnToolWindow1Hiding">
+								<StackPanel>
+									<localview:TestUserControl/>
+									<TextBox Text="{Binding TestTimer, Mode=OneWay, StringFormat='Tool Window 1 Attached to Timer ->\{0\}'}" BorderBrush="Red"/>
+									<Button Content="good" />
+								</StackPanel>
+							</xced:LayoutAnchorable>
+							<xced:LayoutAnchorable ContentId="toolWindow2" Title="Tool Window 2">
+								<TextBlock Text="{Binding FocusedElement}"/>
+							</xced:LayoutAnchorable>
+						</xced:LayoutAnchorablePane>
+					</xced:LayoutAnchorablePaneGroup>
+				</xced:LayoutPanel>
+
+				<xced:LayoutRoot.LeftSide>
+					<xced:LayoutAnchorSide>
+						<xced:LayoutAnchorGroup>
+							<xced:LayoutAnchorable Title="AutoHide1 Content" ContentId="AutoHide1Content" IconSource="/DataTransform;component/Theme/Images/address-book--pencil.png" >
+								<TextBox Text="{Binding TestTimer, Mode=OneWay, StringFormat='AutoHide Attached to Timer ->\{0\}'}"/>
+							</xced:LayoutAnchorable>
+							<xced:LayoutAnchorable Title="AutoHide2 Content" ContentId="AutoHide2Content">
+								<StackPanel Orientation="Vertical">
+									<TextBox/>
+									<TextBox/>
+								</StackPanel>
+							</xced:LayoutAnchorable>
+						</xced:LayoutAnchorGroup>
+					</xced:LayoutAnchorSide>
+				</xced:LayoutRoot.LeftSide>
+			</xced:LayoutRoot>
+		</xced:DockingManager>
+	</Grid>
+</Window>
