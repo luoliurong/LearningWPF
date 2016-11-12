@@ -7,10 +7,9 @@
 		xmlns:local="clr-namespace:DataTransform"
 		xmlns:localview="clr-namespace:DataTransform.View"
 		xmlns:i="clar-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
-		xmlns:winformsIntegration="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
 		mc:Ignorable="d"
 		WindowState="Maximized"
-		Title="Learning WPF" Height="480" Width="700">
+		Title="Data Transform" Height="480" Width="700">
 	<Grid x:Name="MainGrid">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="auto"/>
@@ -19,17 +18,17 @@
 		
 		<!-- Menu Section -->
 		<Menu Grid.Row="0">
-			<MenuItem Header="Repository">
-				<MenuItem Command="New" />
-				<MenuItem Command="{Binding Connect}" />
+			<MenuItem Header="Repository" Height="30" VerticalAlignment="Center">
+				<MenuItem Command="New" FontSize="12"/>
+				<MenuItem Command="{Binding Connect}" Name="Connect" />
 			</MenuItem>
 			<MenuItem Header="Schema">
-				<MenuItem Command="Copy" />
+				<MenuItem Command="{Binding Load}" />
 				<MenuItem Command="Paste" />
 			</MenuItem>
 			<MenuItem Header="Transformation">
-				<MenuItem Command="Cut" />
-				<MenuItem Command="Undo" />
+				<MenuItem Command="New" />
+				<MenuItem Command="Delete" />
 			</MenuItem>
 		</Menu>
 		
@@ -56,56 +55,23 @@
 				</DataTemplate>
 			</xced:DockingManager.DocumentHeaderTemplate>
 			<xced:LayoutRoot x:Name="PART_LayoutRoot">
-				<xced:LayoutPanel Orientation="Horizontal">
-					<xced:LayoutAnchorablePane DockWidth="100">
-						<xced:LayoutAnchorable x:Name="WinFormsWindow"  ContentId="WinFormsWindow" Title="WinForms Window" ToolTip="My WinForms Tool" CanHide="False" CanClose="False" >
-							<winformsIntegration:WindowsFormsHost x:Name="winFormsHost" Background="White"/>
-						</xced:LayoutAnchorable>
+				<xced:LayoutPanel Orientation="Horizontal" DockMinHeight="300">
+					<xced:LayoutAnchorablePane DockWidth="332">
+						<xced:LayoutAnchorable CanHide="False" AutoHideMinWidth="300" AutoHideMinHeight="300" Title="Schema View" IsSelected="True" ContentId="SchemaTreeView" CanClose="False" LastActivationTimeStamp="11/14/2014 11:01:31" />
+						<xced:LayoutAnchorable CanHide="False" AutoHideMinWidth="300" AutoHideMinHeight="300" Title="Transformation View" ContentId="TransformationTreeView" CanClose="False" LastActivationTimeStamp="11/14/2014 11:01:30" />
 					</xced:LayoutAnchorablePane>
-					<xced:LayoutDocumentPaneGroup>
-						<xced:LayoutDocumentPane>
-							<xced:LayoutDocument ContentId="document1" Title="Document 1" IconSource="/DataTransform;component/Theme/Images/alarm-clock-blue.png" >
-								<StackPanel>
-									<TextBox Text="Document 1 Content"/>
-									<Button Content="Click to add 2 documents" Click="AddTwoDocuments_click"/>
-								</StackPanel>
-							</xced:LayoutDocument>
-							<xced:LayoutDocument ContentId="document2" Title="Document 2">
-								<TextBox Text="{Binding TestTimer, Mode=OneWay, StringFormat='Document 2 Attached to Timer ->\{0\}'}"/>
-							</xced:LayoutDocument>
-						</xced:LayoutDocumentPane>
-					</xced:LayoutDocumentPaneGroup>
-					<xced:LayoutAnchorablePaneGroup DockWidth="150">
-						<xced:LayoutAnchorablePane>
-							<xced:LayoutAnchorable ContentId="toolWindow1" Title="Tool Window 1" Hiding="OnToolWindow1Hiding">
-								<StackPanel>
-									<localview:TestUserControl/>
-									<TextBox Text="{Binding TestTimer, Mode=OneWay, StringFormat='Tool Window 1 Attached to Timer ->\{0\}'}" BorderBrush="Red"/>
-									<Button Content="good" />
-								</StackPanel>
-							</xced:LayoutAnchorable>
-							<xced:LayoutAnchorable ContentId="toolWindow2" Title="Tool Window 2">
-								<TextBlock Text="{Binding FocusedElement}"/>
-							</xced:LayoutAnchorable>
+					<xced:LayoutDocumentPane DockWidth="0.668635875402793*"/>
+					<xced:LayoutAnchorablePaneGroup Orientation="Vertical" DockWidth="335">
+						<xced:LayoutAnchorablePaneGroup Orientation="Horizontal" FloatingWidth="300" FloatingHeight="937" FloatingLeft="1620" FloatingTop="517">
+							<xced:LayoutAnchorablePane FloatingWidth="300" FloatingHeight="937" FloatingLeft="1620" FloatingTop="517">
+								<xced:LayoutAnchorable CanHide="False" AutoHideMinWidth="300" AutoHideMinHeight="300" Title="Properties" IsSelected="True" ContentId="Properties" FloatingLeft="1020" FloatingTop="50" FloatingWidth="300" FloatingHeight="517" CanClose="False" LastActivationTimeStamp="11/06/2013 14:09:19" PreviousContainerIndex="4" />
+							</xced:LayoutAnchorablePane>
+						</xced:LayoutAnchorablePaneGroup>
+						<xced:LayoutAnchorablePane DockWidth="288" FloatingWidth="300" FloatingHeight="937" FloatingLeft="1589" FloatingTop="519">
+							<xced:LayoutAnchorable CanHide="False" AutoHideMinWidth="300" AutoHideMinHeight="300" Title="Info Pane" IsSelected="True" ContentId="InfoPane" FloatingLeft="1020" FloatingTop="350" FloatingWidth="300" FloatingHeight="517" CanClose="False" LastActivationTimeStamp="11/14/2014 11:01:22" PreviousContainerIndex="5" />
 						</xced:LayoutAnchorablePane>
 					</xced:LayoutAnchorablePaneGroup>
 				</xced:LayoutPanel>
-
-				<xced:LayoutRoot.LeftSide>
-					<xced:LayoutAnchorSide>
-						<xced:LayoutAnchorGroup>
-							<xced:LayoutAnchorable Title="AutoHide1 Content" ContentId="AutoHide1Content" IconSource="/DataTransform;component/Theme/Images/address-book--pencil.png" >
-								<TextBox Text="{Binding TestTimer, Mode=OneWay, StringFormat='AutoHide Attached to Timer ->\{0\}'}"/>
-							</xced:LayoutAnchorable>
-							<xced:LayoutAnchorable Title="AutoHide2 Content" ContentId="AutoHide2Content">
-								<StackPanel Orientation="Vertical">
-									<TextBox/>
-									<TextBox/>
-								</StackPanel>
-							</xced:LayoutAnchorable>
-						</xced:LayoutAnchorGroup>
-					</xced:LayoutAnchorSide>
-				</xced:LayoutRoot.LeftSide>
 			</xced:LayoutRoot>
 		</xced:DockingManager>
 	</Grid>

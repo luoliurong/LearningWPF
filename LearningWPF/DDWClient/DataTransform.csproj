@@ -53,7 +53,6 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="WindowsFormsIntegration" />
     <Reference Include="Xceed.Wpf.DataGrid">
       <HintPath>..\packages\Xceed.Wpf.DataGrid.dll</HintPath>
     </Reference>
