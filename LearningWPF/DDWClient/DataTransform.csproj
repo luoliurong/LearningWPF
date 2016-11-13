@@ -62,8 +62,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="View\TestUserControl.xaml.cs">
-      <DependentUpon>TestUserControl.xaml</DependentUpon>
+    <Compile Include="View\SchemaTreeView.xaml.cs">
+      <DependentUpon>SchemaTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TransformationTreeView.xaml.cs">
+      <DependentUpon>TransformationTreeView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -81,7 +84,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\TestUserControl.xaml">
+    <Page Include="View\SchemaTreeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TransformationTreeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -118,6 +125,14 @@
     <ProjectReference Include="..\library\DataTransform.Common\DataTransform.Common.csproj">
       <Project>{e3249f2f-22c9-4f7c-8b92-a2fbff182852}</Project>
       <Name>DataTransform.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\library\thirdpart\Prism.Wpf\Prism.Wpf.csproj">
+      <Project>{5912ff03-c72b-4f56-baa1-8642fdbfbc26}</Project>
+      <Name>Prism.Wpf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\library\thirdpart\Prism\Prism.csproj">
+      <Project>{e6c50355-d01e-4caa-884d-d7929861315c}</Project>
+      <Name>Prism</Name>
     </ProjectReference>
     <ProjectReference Include="..\library\thirdpart\Xceed.Wpf.AvalonDock\Xceed.Wpf.AvalonDock.csproj">
       <Project>{db81988f-e0f2-45a0-a1fd-8c37f3d35244}</Project>

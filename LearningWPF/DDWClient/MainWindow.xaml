@@ -57,8 +57,12 @@
 			<xced:LayoutRoot x:Name="PART_LayoutRoot">
 				<xced:LayoutPanel Orientation="Horizontal" DockMinHeight="300">
 					<xced:LayoutAnchorablePane DockWidth="332">
-						<xced:LayoutAnchorable CanHide="False" AutoHideMinWidth="300" AutoHideMinHeight="300" Title="Schema View" IsSelected="True" ContentId="SchemaTreeView" CanClose="False" LastActivationTimeStamp="11/14/2014 11:01:31" />
-						<xced:LayoutAnchorable CanHide="False" AutoHideMinWidth="300" AutoHideMinHeight="300" Title="Transformation View" ContentId="TransformationTreeView" CanClose="False" LastActivationTimeStamp="11/14/2014 11:01:30" />
+						<xced:LayoutAnchorable CanHide="False" AutoHideMinWidth="300" AutoHideMinHeight="300" Title="Schema View" IsSelected="True" ContentId="SchemaTreeView" CanClose="False" LastActivationTimeStamp="11/14/2014 11:01:31">
+							<localview:SchemaTreeView />
+						</xced:LayoutAnchorable>
+						<xced:LayoutAnchorable CanHide="False" AutoHideMinWidth="300" AutoHideMinHeight="300" Title="Transformation View" ContentId="TransformationTreeView" CanClose="False" LastActivationTimeStamp="11/14/2014 11:01:30">
+							<localview:TransformationTreeView/>
+						</xced:LayoutAnchorable>
 					</xced:LayoutAnchorablePane>
 					<xced:LayoutDocumentPane DockWidth="0.668635875402793*"/>
 					<xced:LayoutAnchorablePaneGroup Orientation="Vertical" DockWidth="335">

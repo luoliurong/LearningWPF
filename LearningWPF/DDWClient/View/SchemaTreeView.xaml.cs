@@ -16,25 +16,18 @@ using System.Windows.Shapes;
 namespace DataTransform.View
 {
 	/// <summary>
-	/// Interaction logic for TestUserControl.xaml
+	/// Interaction logic for SchemaTreeView.xaml
 	/// </summary>
-	public partial class TestUserControl : UserControl
+	public partial class SchemaTreeView : UserControl
 	{
-		public TestUserControl()
+		public SchemaTreeView()
 		{
 			InitializeComponent();
-			this.Loaded += new RoutedEventHandler(TestUserControl_Loaded);
-			this.Unloaded += new RoutedEventHandler(TestUserControl_Unloaded);
 		}
 
-		void TestUserControl_Unloaded(object sender, RoutedEventArgs e)
+		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-
-		}
-
-		void TestUserControl_Loaded(object sender, RoutedEventArgs e)
-		{
-
+			MessageBox.Show("you clicked me at time " + DateTime.Now.ToString());
 		}
 	}
 }
