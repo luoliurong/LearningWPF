@@ -62,8 +62,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\TopMenuViewModel.cs" />
     <Compile Include="View\SchemaTreeView.xaml.cs">
       <DependentUpon>SchemaTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TopMenuView.xaml.cs">
+      <DependentUpon>TopMenuView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\TransformationTreeView.xaml.cs">
       <DependentUpon>TransformationTreeView.xaml</DependentUpon>
@@ -85,6 +89,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SchemaTreeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TopMenuView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -139,9 +147,7 @@
       <Name>Xceed.Wpf.AvalonDock</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Theme\Images\address-book--pencil.png" />
     <Resource Include="Theme\Images\address-book-open.png" />

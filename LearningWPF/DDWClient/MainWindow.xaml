@@ -6,7 +6,6 @@
 		xmlns:xced ="http://schemas.xceed.com/wpf/xaml/avalondock"
 		xmlns:local="clr-namespace:DataTransform"
 		xmlns:localview="clr-namespace:DataTransform.View"
-		xmlns:i="clar-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
 		mc:Ignorable="d"
 		WindowState="Maximized"
 		Title="Data Transform" Height="480" Width="700">
@@ -15,22 +14,10 @@
 			<RowDefinition Height="auto"/>
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
-		
+		<StackPanel Grid.Row="0">
+			<localview:TopMenuView />
+		</StackPanel>
 		<!-- Menu Section -->
-		<Menu Grid.Row="0">
-			<MenuItem Header="Repository" Height="30" VerticalAlignment="Center">
-				<MenuItem Command="New" FontSize="12"/>
-				<MenuItem Command="{Binding Connect}" Name="Connect" />
-			</MenuItem>
-			<MenuItem Header="Schema">
-				<MenuItem Command="{Binding Load}" />
-				<MenuItem Command="Paste" />
-			</MenuItem>
-			<MenuItem Header="Transformation">
-				<MenuItem Command="New" />
-				<MenuItem Command="Delete" />
-			</MenuItem>
-		</Menu>
 		
 		<xced:DockingManager x:Name="dockManager"
 							 Grid.Row="1"

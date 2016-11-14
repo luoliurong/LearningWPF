@@ -7,6 +7,26 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-		<Label Name="lblmsg" Content="there will be treeview for transformation" />
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<Label Grid.Row="0" Name="lblmsg" Content="there will be treeview for transformation" />
+		<TreeView Grid.Row="1" Name="TransformationTree" Margin="5">
+			<TreeView.Resources>
+				<HierarchicalDataTemplate DataType="{x:Type local:TransformationTree}" ItemsSource="{Binding Nodes}">
+					<StackPanel Orientation="Horizontal">
+						<Image Source="/DataTransform;component/Theme/Images/alarm-clock-blue.png" Margin="0,0,5,0" />
+						<TextBlock Text="{Binding Name}" />
+					</StackPanel>
+				</HierarchicalDataTemplate>
+				<DataTemplate DataType="{x:Type local:Node}">
+					<StackPanel Orientation="Horizontal">
+						<Image Source="/DataTransform;component/Theme/Images/address-book--pencil.png" Margin="0,0,5,0"/>
+						<TextBlock Text="{Binding Name}" />
+					</StackPanel>
+				</DataTemplate>
+			</TreeView.Resources>
+		</TreeView>
 	</Grid>
 </UserControl>
