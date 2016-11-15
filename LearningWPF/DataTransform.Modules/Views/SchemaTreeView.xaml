@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="DataTransform.Modules.Views.SchemaTreeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local2="clr-namespace:DataTransform.Modules.Views"
+			 xmlns:local="clr-namespace:DataTransform.Modules.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<Button Grid.Row="0" Content="TestButton" Width="100" Height="30" Click="Button_Click" />
+		<TreeView Grid.Row="1" Name="SchemaTree" Margin="5">
+			<TreeView.Resources>
+				<HierarchicalDataTemplate ItemsSource="{Binding TreeList}">
+					<StackPanel Orientation="Horizontal">
+						<Image Source="/DataTransform;component/Theme/Images/alarm-clock-blue.png" Margin="0,0,5,0" />
+						<TextBlock Text="{Binding Name}" />
+					</StackPanel>
+				</HierarchicalDataTemplate>
+				<DataTemplate DataType="{x:Type local:Node}">
+					<StackPanel Orientation="Horizontal">
+						<Image Source="/DataTransform;component/Theme/Images/address-book--pencil.png" Margin="0,0,5,0"/>
+						<TextBlock Text="{Binding Name}" />
+					</StackPanel>
+				</DataTemplate>
+			</TreeView.Resources>
+		</TreeView>
+	</Grid>
+</UserControl>

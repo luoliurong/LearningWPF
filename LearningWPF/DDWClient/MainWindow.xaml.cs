@@ -36,6 +36,11 @@ namespace DataTransform
 
 		}
 
+		private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+		{
+			MessageBox.Show("New command triggered.");
+		}
+
 		//private void OnLoadLayout(object sender, RoutedEventArgs e)
 		//{
 		//	var currentContentsList = dockManager.Layout.Descendents().OfType<LayoutContent>().Where(c => c.ContentId != null).ToArray();

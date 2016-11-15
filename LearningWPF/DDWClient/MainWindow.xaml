@@ -6,9 +6,13 @@
 		xmlns:xced ="http://schemas.xceed.com/wpf/xaml/avalondock"
 		xmlns:local="clr-namespace:DataTransform"
 		xmlns:localview="clr-namespace:DataTransform.View"
+		xmlns:prism="http://prismlibrary.com/"
 		mc:Ignorable="d"
 		WindowState="Maximized"
 		Title="Data Transform" Height="480" Width="700">
+	<Window.CommandBindings>
+		<CommandBinding Command="ApplicationCommands.New" Executed="CommandBinding_Executed"/>
+	</Window.CommandBindings>
 	<Grid x:Name="MainGrid">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="auto"/>
@@ -17,8 +21,7 @@
 		<StackPanel Grid.Row="0">
 			<localview:TopMenuView />
 		</StackPanel>
-		<!-- Menu Section -->
-		
+
 		<xced:DockingManager x:Name="dockManager"
 							 Grid.Row="1"
 							 AllowMixedOrientation="True"
@@ -45,7 +48,8 @@
 				<xced:LayoutPanel Orientation="Horizontal" DockMinHeight="300">
 					<xced:LayoutAnchorablePane DockWidth="332">
 						<xced:LayoutAnchorable CanHide="False" AutoHideMinWidth="300" AutoHideMinHeight="300" Title="Schema View" IsSelected="True" ContentId="SchemaTreeView" CanClose="False" LastActivationTimeStamp="11/14/2014 11:01:31">
-							<localview:SchemaTreeView />
+							<!--<localview:SchemaTreeView />-->
+							<ContentControl prism:RegionManager.RegionName="SchemaTreeRegion" />
 						</xced:LayoutAnchorable>
 						<xced:LayoutAnchorable CanHide="False" AutoHideMinWidth="300" AutoHideMinHeight="300" Title="Transformation View" ContentId="TransformationTreeView" CanClose="False" LastActivationTimeStamp="11/14/2014 11:01:30">
 							<localview:TransformationTreeView/>

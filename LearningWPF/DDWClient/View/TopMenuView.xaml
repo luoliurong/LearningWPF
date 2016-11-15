@@ -20,7 +20,7 @@
 				<MenuItem AutomationProperties.AutomationId="MenuItem_NewRepository" Header="New" x:Name="mNewRepository" Command="{Binding RaiseNewRepositoryCommand}" FontSize="12">
 					
 				</MenuItem>
-				<MenuItem Command="{Binding Connect}" Name="Connect" />
+				<MenuItem Command="New" Name="Connect" Header="Connect" />
 			</MenuItem>
 			<MenuItem Header="Schema">
 				<MenuItem Command="{Binding Load}" />
