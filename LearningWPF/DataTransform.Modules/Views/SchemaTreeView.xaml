@@ -15,15 +15,15 @@
 		<Button Grid.Row="0" Content="TestButton" Width="100" Height="30" Click="Button_Click" />
 		<TreeView Grid.Row="1" Name="SchemaTree" Margin="5">
 			<TreeView.Resources>
-				<HierarchicalDataTemplate ItemsSource="{Binding TreeList}">
+				<HierarchicalDataTemplate DataType="{x:Type local:SchemaTree}" ItemsSource="{Binding TreeList}">
 					<StackPanel Orientation="Horizontal">
-						<Image Source="/DataTransform;component/Theme/Images/alarm-clock-blue.png" Margin="0,0,5,0" />
+						<!--<Image Source="/DataTransform;component/Theme/Images/alarm-clock-blue.png" Margin="0,0,5,0" />-->
 						<TextBlock Text="{Binding Name}" />
 					</StackPanel>
 				</HierarchicalDataTemplate>
 				<DataTemplate DataType="{x:Type local:Node}">
 					<StackPanel Orientation="Horizontal">
-						<Image Source="/DataTransform;component/Theme/Images/address-book--pencil.png" Margin="0,0,5,0"/>
+						<!--<Image Source="/DataTransform;component/Theme/Images/address-book-pencil.png" Margin="0,0,5,0"/>-->
 						<TextBlock Text="{Binding Name}" />
 					</StackPanel>
 				</DataTemplate>
