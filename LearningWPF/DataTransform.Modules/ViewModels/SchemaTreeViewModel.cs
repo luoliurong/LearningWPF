@@ -10,14 +10,24 @@ namespace DataTransform.Modules.ViewModels
 {
 	public class SchemaTreeViewModel:BindableBase
 	{
+		private string buttonTitle;
+		public string Title
+		{
+			get { return buttonTitle; }
+			set { SetProperty(ref buttonTitle, value); }
+		}
+
 		public List<SchemaTree> treeList = new List<SchemaTree>();
 		public List<SchemaTree> TreeList
 		{
 			get { return treeList; }
 			set { SetProperty(ref treeList, value); }
 		}
+
 		public SchemaTreeViewModel()
 		{
+			buttonTitle = "TestButton";
+
 			for (var i = 1; i <= 10; i++)
 			{
 				SchemaTree tree = new SchemaTree() { Name = "Database" + i.ToString() };

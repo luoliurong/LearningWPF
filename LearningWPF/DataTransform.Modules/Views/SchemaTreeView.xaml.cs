@@ -23,6 +23,9 @@ namespace DataTransform.Modules.Views
 		public SchemaTreeView()
 		{
 			InitializeComponent();
+			var vm = new ViewModels.SchemaTreeViewModel();
+			base.DataContext = vm;
+			this.schemaTree.ItemsSource = vm.treeList;
 		}
 
 		private void Button_Click(object sender, RoutedEventArgs e)

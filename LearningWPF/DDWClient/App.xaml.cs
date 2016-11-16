@@ -19,5 +19,11 @@ namespace DataTransform
 			Bootstrapper bs = new Bootstrapper();
 			bs.Run();
 		}
+
+		protected override void OnExit(ExitEventArgs e)
+		{
+			base.OnExit(e);
+			Application.Current.Shutdown();
+		}
 	}
 }

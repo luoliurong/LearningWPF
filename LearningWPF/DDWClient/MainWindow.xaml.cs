@@ -41,6 +41,11 @@ namespace DataTransform
 			MessageBox.Show("New command triggered.");
 		}
 
+		private void Window_Closed(object sender, EventArgs e)
+		{
+			Application.Current.Shutdown();
+		}
+
 		//private void OnLoadLayout(object sender, RoutedEventArgs e)
 		//{
 		//	var currentContentsList = dockManager.Layout.Descendents().OfType<LayoutContent>().Where(c => c.ContentId != null).ToArray();

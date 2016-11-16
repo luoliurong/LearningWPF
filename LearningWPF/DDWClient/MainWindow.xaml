@@ -9,7 +9,7 @@
 		xmlns:prism="http://prismlibrary.com/"
 		mc:Ignorable="d"
 		WindowState="Maximized"
-		Title="Data Transform" Height="480" Width="700">
+		Title="Data Transform" Height="480" Width="700" Closed="Window_Closed">
 	<Window.CommandBindings>
 		<CommandBinding Command="ApplicationCommands.New" Executed="CommandBinding_Executed"/>
 	</Window.CommandBindings>
