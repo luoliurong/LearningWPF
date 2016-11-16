@@ -24,7 +24,7 @@ namespace DataTransform
 		protected override void ConfigureModuleCatalog()
 		{
 			ModuleCatalog catalog = (ModuleCatalog)ModuleCatalog;
-			catalog.AddModule(typeof(SchemaTreeModule));
+			catalog.AddModule(typeof(Modules.ModuleManager));
 		}
 	}
 }

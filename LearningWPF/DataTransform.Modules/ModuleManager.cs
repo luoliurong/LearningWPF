@@ -9,16 +9,17 @@ using DataTransform.Modules.Views;
 
 namespace DataTransform.Modules
 {
-	public class SchemaTreeModule : IModule
+	public class ModuleManager : IModule
 	{
 		IRegionManager _regionManager;
-		public SchemaTreeModule(IRegionManager regionManager)
+		public ModuleManager(IRegionManager regionManager)
 		{
 			_regionManager = regionManager;
 		}
 		public void Initialize()
 		{
 			_regionManager.RegisterViewWithRegion("SchemaTreeRegion", typeof(SchemaTreeView));
+			_regionManager.RegisterViewWithRegion("TopMenuRegion", typeof(TopMenuView));
 		}
 	}
 }

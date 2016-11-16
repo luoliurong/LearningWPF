@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DataTransform.View
+namespace DataTransform.Modules.Views
 {
 	/// <summary>
 	/// Interaction logic for TopMenuView.xaml

@@ -1,17 +1,15 @@
-﻿using System;
+﻿using Prism.Commands;
+using Prism.Interactivity.InteractionRequest;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Prism;
-using Prism.Commands;
-using Prism.Mvvm;
-using Prism.Interactivity.InteractionRequest;
 using System.Windows.Input;
 
-namespace DataTransform.ViewModel
+namespace DataTransform.Modules.ViewModels
 {
-	public class TopMenuViewModel : BindableBase
+	public class TopMenuViewModel
 	{
 		public TopMenuViewModel()
 		{

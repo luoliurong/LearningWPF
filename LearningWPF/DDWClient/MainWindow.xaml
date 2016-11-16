@@ -19,7 +19,8 @@
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 		<StackPanel Grid.Row="0">
-			<localview:TopMenuView />
+			<!--<localview:TopMenuView />-->
+			<ContentControl prism:RegionManager.RegionName="TopMenuRegion" />
 		</StackPanel>
 
 		<xced:DockingManager x:Name="dockManager"
@@ -48,7 +49,6 @@
 				<xced:LayoutPanel Orientation="Horizontal" DockMinHeight="300">
 					<xced:LayoutAnchorablePane DockWidth="332">
 						<xced:LayoutAnchorable CanHide="False" AutoHideMinWidth="300" AutoHideMinHeight="300" Title="Schema View" IsSelected="True" ContentId="SchemaTreeView" CanClose="False" LastActivationTimeStamp="11/14/2014 11:01:31">
-							<!--<localview:SchemaTreeView />-->
 							<ContentControl prism:RegionManager.RegionName="SchemaTreeRegion" />
 						</xced:LayoutAnchorable>
 						<xced:LayoutAnchorable CanHide="False" AutoHideMinWidth="300" AutoHideMinHeight="300" Title="Transformation View" ContentId="TransformationTreeView" CanClose="False" LastActivationTimeStamp="11/14/2014 11:01:30">

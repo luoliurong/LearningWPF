@@ -3,4 +3,15 @@
 					xmlns:theme="clr-namespace:DataTransform.Theme">
 	<SolidColorBrush x:Key="MainWindowBgBrush">#647180</SolidColorBrush>
 	<SolidColorBrush x:Key="DockBorderBrush">Transparent</SolidColorBrush>
+	<!--style of elements-->
+	<Style x:Key="LabelTemplate" TargetType="{x:Type Label}">
+		<Setter Property="Height" Value="30" />
+		<Setter Property="Width" Value="258" />
+		<Setter Property="HorizontalAlignment" Value="Left" />
+		<Setter Property="Margin" Value="10,5" />
+		<Setter Property="VerticalAlignment" Value= "Center" />
+		<Setter Property="Foreground" Value="#FFE75959" />
+		<Setter Property="FontFamily" Value="Calibri" />
+		<Setter Property="FontSize" Value="15" />
+	</Style>
 </ResourceDictionary>
