@@ -3,11 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:local="clr-namespace:DataTransform.Modules.Views"
 			 xmlns:prism="http://prismlibrary.com/"
 			 prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
+	<i:Interaction.Triggers>
+		<prism:InteractionRequestTrigger SourceObject="{Binding NewRepositoryRequest, Mode=OneWay}">
+			<prism:PopupWindowAction IsModal="True" CenterOverAssociatedObject="False"/>
+		</prism:InteractionRequestTrigger>
+	</i:Interaction.Triggers>
     <Grid>
 		<Menu>
 			<MenuItem Header="Repository" Height="30" VerticalAlignment="Center">
