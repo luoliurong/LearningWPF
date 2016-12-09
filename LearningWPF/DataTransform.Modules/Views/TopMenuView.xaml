@@ -11,7 +11,7 @@
              d:DesignHeight="300" d:DesignWidth="300">
 	<i:Interaction.Triggers>
 		<prism:InteractionRequestTrigger SourceObject="{Binding NewRepositoryRequest, Mode=OneWay}">
-			<prism:PopupWindowAction IsModal="True" CenterOverAssociatedObject="False"/>
+			<prism:PopupWindowAction IsModal="True" CenterOverAssociatedObject="True"/>
 		</prism:InteractionRequestTrigger>
 	</i:Interaction.Triggers>
     <Grid>
@@ -20,15 +20,16 @@
 				<MenuItem AutomationProperties.AutomationId="MenuItem_NewRepository" Header="New" x:Name="mNewRepository" Command="{Binding RaiseNewRepositoryCommand}" FontSize="12">
 
 				</MenuItem>
-				<MenuItem Command="New" Name="Connect" Header="Connect" />
+				<MenuItem Command="{Binding RaiseNewRepositoryCommand}" Name="Connect" Header="Connect" />
 			</MenuItem>
 			<MenuItem Header="Schema">
-				<MenuItem Command="{Binding Load}" />
-				<MenuItem Command="Paste" />
+				<MenuItem Command="{Binding LoadSchemaCommand}" Name="Load" Header="Load" />
+				<MenuItem Command="Copy" Name="Copy" />
+				<MenuItem Command="Paste" Name="Paste" />
 			</MenuItem>
 			<MenuItem Header="Transformation">
-				<MenuItem Command="New" />
-				<MenuItem Command="Delete" />
+				<MenuItem Command="{Binding RaiseNewRepositoryCommand}" Name="New" Header="New" />
+				<MenuItem Command="Delete" Name="Delete" />
 			</MenuItem>
 		</Menu>
 	</Grid>

@@ -67,6 +67,15 @@
 						</xced:LayoutAnchorablePane>
 					</xced:LayoutAnchorablePaneGroup>
 				</xced:LayoutPanel>
+				<xced:LayoutRoot.BottomSide>
+					<xced:LayoutAnchorSide>
+						<xced:LayoutAnchorGroup>
+							<xced:LayoutAnchorable CanHide="False" AutoHideMinWidth="300" AutoHideMinHeight="100" Title="Error List" IsSelected="True" ContentId="ErrorList" FloatingLeft="50" FloatingTop="500" FloatingWidth="1100" FloatingHeight="300" CanClose="False" LastActivationTimeStamp="11/06/2013 14:09:32" PreviousContainerIndex="2">
+								<TextBox Text="Hello, this is left side"/>
+							</xced:LayoutAnchorable>
+						</xced:LayoutAnchorGroup>
+					</xced:LayoutAnchorSide>
+				</xced:LayoutRoot.BottomSide>
 			</xced:LayoutRoot>
 		</xced:DockingManager>
 	</Grid>
