@@ -79,9 +79,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="View\TransformationTreeView.xaml.cs">
-      <DependentUpon>TransformationTreeView.xaml</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -95,10 +92,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Theme\Default.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\TransformationTreeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -160,6 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModel\" />
+    <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Theme\Images\address-book--pencil.png" />
