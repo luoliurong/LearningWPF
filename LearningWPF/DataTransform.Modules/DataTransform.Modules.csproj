@@ -70,8 +70,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="ModuleManager.cs" />
+    <Compile Include="ViewModels\ErrorListViewModel.cs" />
     <Compile Include="ViewModels\SchemaTreeViewModel.cs" />
     <Compile Include="ViewModels\TopMenuViewModel.cs" />
+    <Compile Include="Views\ErrorListView.xaml.cs">
+      <DependentUpon>ErrorListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SchemaTreeView.xaml.cs">
       <DependentUpon>SchemaTreeView.xaml</DependentUpon>
     </Compile>
@@ -106,6 +110,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\ErrorListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\SchemaTreeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

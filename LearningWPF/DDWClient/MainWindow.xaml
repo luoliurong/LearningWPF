@@ -69,7 +69,7 @@
 					<xced:LayoutAnchorSide>
 						<xced:LayoutAnchorGroup>
 							<xced:LayoutAnchorable CanHide="False" AutoHideHeight="150" AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Error List" IsSelected="True" ContentId="ErrorList" FloatingLeft="50" FloatingTop="800" FloatingWidth="1100" FloatingHeight="100" CanClose="False" LastActivationTimeStamp="11/06/2013 14:09:32" PreviousContainerIndex="2">
-								<TextBox Text="Hello, this is error list panel"/>
+								<ContentControl prism:RegionManager.RegionName="ErrorListRegion"/>
 							</xced:LayoutAnchorable>
 						</xced:LayoutAnchorGroup>
 					</xced:LayoutAnchorSide>

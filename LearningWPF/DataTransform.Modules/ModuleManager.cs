@@ -21,6 +21,7 @@ namespace DataTransform.Modules
 			_regionManager.RegisterViewWithRegion("SchemaTreeRegion", typeof(SchemaTreeView));
 			_regionManager.RegisterViewWithRegion("TopMenuRegion", typeof(TopMenuView));
 			_regionManager.RegisterViewWithRegion("TransformationTreeRegion", typeof(TransformationTreeView));
+			_regionManager.RegisterViewWithRegion("ErrorListRegion", typeof(ErrorListView));
 		}
 	}
 }
