@@ -4,9 +4,47 @@
 			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
 			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
 			 xmlns:local="clr-namespace:DataTransform.Modules.Views"
+			 xmlns:rs="clr-namespace:DataTransform.Resources;assembly=DataTransform.Resources"
 			 mc:Ignorable="d" 
 			 d:DesignHeight="300" d:DesignWidth="300">
 	<Grid>
-		<TextBlock Text="hello error list!"/>
+	<DockPanel Style="{StaticResource MainContentStyle}">
+		<DockPanel DockPanel.Dock="Top" LastChildFill="False">
+			<ComboBox x:Name="cmbErrorFilter">
+				<ComboBoxItem IsSelected="True">Item 1</ComboBoxItem>
+				<ComboBoxItem>Item 2</ComboBoxItem>
+				<ComboBoxItem>Item 3</ComboBoxItem>
+				<ComboBoxItem>Item 4</ComboBoxItem>
+			</ComboBox>
+			<Border Margin="1,0"
+				        BorderBrush="{StaticResource ControlBrush}"
+				        BorderThickness="1" />
+			<ToggleButton AutomationProperties.AutomationId="toggbutton1">
+				<DockPanel>
+					<Image Width="16"
+						       Height="16"
+						       Margin="0,0,2,0"
+						       Source="{StaticResource ErrorIconImage}" />
+					<TextBlock AutomationProperties.AutomationId="txtbox1">
+						Errors : 12
+					</TextBlock>
+				</DockPanel>
+			</ToggleButton>
+			<Border Margin="1,0"
+				        BorderBrush="{StaticResource ControlBrush}"
+				        BorderThickness="1" />
+			<ToggleButton AutomationProperties.AutomationId="toggbutton2" >
+				<DockPanel>
+					<Image Width="16"
+						       Height="16"
+						       Margin="0,0,2,0"
+						       Source="{StaticResource WarningIconImage}" />
+					<TextBlock AutomationProperties.AutomationId="txtbox2">
+						Warnings : 8
+					</TextBlock>
+				</DockPanel>
+			</ToggleButton>
+		</DockPanel>
+	</DockPanel>
 	</Grid>
 </UserControl>

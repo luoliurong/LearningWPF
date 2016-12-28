@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTransform.Modules", "Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Unity.Wpf", "library\thirdpart\Prism.Unity.Wpf\Prism.Unity.Wpf.csproj", "{C1CE34C7-6AC9-4D54-BAD0-8467E9F9F38D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTransform.Resources", "library\DataTransform.Resources\DataTransform.Resources.csproj", "{2513C8EB-4FB7-42BD-8FB0-8655AAB6B8E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,12 @@ Global
 		{C1CE34C7-6AC9-4D54-BAD0-8467E9F9F38D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C1CE34C7-6AC9-4D54-BAD0-8467E9F9F38D}.Test|Any CPU.ActiveCfg = Release|Any CPU
 		{C1CE34C7-6AC9-4D54-BAD0-8467E9F9F38D}.Test|Any CPU.Build.0 = Release|Any CPU
+		{2513C8EB-4FB7-42BD-8FB0-8655AAB6B8E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2513C8EB-4FB7-42BD-8FB0-8655AAB6B8E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2513C8EB-4FB7-42BD-8FB0-8655AAB6B8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2513C8EB-4FB7-42BD-8FB0-8655AAB6B8E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2513C8EB-4FB7-42BD-8FB0-8655AAB6B8E6}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{2513C8EB-4FB7-42BD-8FB0-8655AAB6B8E6}.Test|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,5 +87,6 @@ Global
 		{E6C50355-D01E-4CAA-884D-D7929861315C} = {B6D83159-A8B2-4557-94DF-F39DFD45DEB8}
 		{F1A0FC60-166E-41EE-BCBF-94AFE2224687} = {B6D83159-A8B2-4557-94DF-F39DFD45DEB8}
 		{C1CE34C7-6AC9-4D54-BAD0-8467E9F9F38D} = {B6D83159-A8B2-4557-94DF-F39DFD45DEB8}
+		{2513C8EB-4FB7-42BD-8FB0-8655AAB6B8E6} = {B6D83159-A8B2-4557-94DF-F39DFD45DEB8}
 	EndGlobalSection
 EndGlobal
