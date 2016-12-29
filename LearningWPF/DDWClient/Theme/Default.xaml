@@ -8,8 +8,17 @@
 	<SolidColorBrush x:Key="DockBorderBrush">Transparent</SolidColorBrush>
 	<Color x:Key="ControlColor">#FFF0F0F0</Color>
 	<SolidColorBrush x:Key="ControlBrush" Color="{StaticResource ControlColor}" />
+	<SolidColorBrush x:Key="ToolBarButtonHover" Color="#FFEEC2" />
+	<SolidColorBrush x:Key="ToolBarButtonBorder" Color="#3399ff" />
+	<SolidColorBrush x:Key="UncheckedFontBrush">#7a7a7a</SolidColorBrush>
+	<LinearGradientBrush x:Key="SelectedErrorListViewHeaderBgBrush" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#FF4DC9EC" Offset="0"/>
+		<GradientStop Color="#FF4DC9EC" Offset="0.15"/>
+		<GradientStop Color="White" Offset="0.15"/>
+		<GradientStop Color="White" Offset="1"/>
+	</LinearGradientBrush>
 	<!--Global styles ends-->
-	
+
 	<!--Windows styles starts-->
 	<Style x:Key="MainContentStyle">
 		<Setter Property="Control.Background" Value="{StaticResource WindowBgBrush}" />
@@ -17,7 +26,7 @@
 		<Setter Property="Control.VerticalAlignment" Value="Stretch" />
 	</Style>
 	<!--Windows styles ends-->
-	
+
 	<!--style of elements starts-->
 	<Style x:Key="LabelTemplate" TargetType="{x:Type Label}">
 		<Setter Property="Height" Value="30" />
@@ -29,8 +38,8 @@
 		<Setter Property="FontFamily" Value="Calibri" />
 		<Setter Property="FontSize" Value="15" />
 	</Style>
-	
-	<!-- Style of Flat ComboBox -->
+
+	<!-- Start of Style for Flat ComboBox -->
 	<SolidColorBrush x:Key="ComboBoxNormalBorderBrush" Color="#e3e9ef" />
 	<SolidColorBrush x:Key="ComboBoxNormalBackgroundBrush" Color="#fff" />
 	<SolidColorBrush x:Key="ComboBoxDisabledForegroundBrush" Color="#888" />
@@ -144,7 +153,60 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
-	<!-- End of Flat ComboBox -->
+	<!-- End of Style for Flat ComboBox -->
+	<Style x:Key="CheckableToggleButtonStyle" TargetType="{x:Type Control}">
+		<Setter Property="Foreground" Value="{StaticResource UncheckedFontBrush}" />
+		<Setter Property="Padding" Value="2" />
+		<Setter Property="BorderThickness" Value="1" />
+		<Setter Property="Background" Value="Transparent" />
+		<Setter Property="BorderBrush" Value="Transparent" />
+		<Setter Property="HorizontalAlignment" Value="Center" />
+		<Setter Property="VerticalAlignment" Value="Center" />
+		<Setter Property="HorizontalContentAlignment" Value="Center" />
+		<Setter Property="VerticalContentAlignment" Value="Center" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ToggleButton}">
+					<Border Name="bd"
+                            Background="{TemplateBinding Background}"
+					        BorderBrush="{StaticResource ToolBarButtonBorder}"
+					        BorderThickness="0"
+					        Padding="{TemplateBinding Padding}"
+					        SnapsToDevicePixels="true">
+						<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+						                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+						                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsChecked" Value="true">
+							<Setter Property="Background" Value="{StaticResource SelectedErrorListViewHeaderBgBrush}" />
+							<Setter Property="Margin" Value="0,-1,0,0" />
+							<Setter Property="Padding" Value="4,3,4,5" />
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+						</Trigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition Property="IsMouseOver" Value="true"></Condition>
+								<Condition Property="IsChecked" Value="true"></Condition>
+							</MultiTrigger.Conditions>
+							<Setter Property="Background" Value="{StaticResource SelectedErrorListViewHeaderBgBrush}" />
+							<Setter Property="Margin" Value="0,-1,0,0" />
+							<Setter Property="Padding" Value="4,3,4,5" />
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition Property="IsMouseOver" Value="true"></Condition>
+								<Condition Property="IsChecked" Value="false"></Condition>
+							</MultiTrigger.Conditions>
+							<Setter Property="Background" Value="{StaticResource ToolBarButtonHover}" />
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
 	<!--style of elements ends-->
 
 	<!--Image resources starts-->

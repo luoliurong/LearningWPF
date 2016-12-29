@@ -7,19 +7,24 @@
 			 xmlns:rs="clr-namespace:DataTransform.Resources;assembly=DataTransform.Resources"
 			 mc:Ignorable="d" 
 			 d:DesignHeight="300" d:DesignWidth="300">
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../Theme/Default.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
 	<Grid>
-	<DockPanel Style="{StaticResource MainContentStyle}">
+	<DockPanel>
 		<DockPanel DockPanel.Dock="Top" LastChildFill="False">
-			<ComboBox x:Name="cmbErrorFilter">
+			<ComboBox x:Name="cmbErrorFilter" Style="{StaticResource ComboBoxFlatStyle}">
 				<ComboBoxItem IsSelected="True">Item 1</ComboBoxItem>
 				<ComboBoxItem>Item 2</ComboBoxItem>
 				<ComboBoxItem>Item 3</ComboBoxItem>
 				<ComboBoxItem>Item 4</ComboBoxItem>
 			</ComboBox>
-			<Border Margin="1,0"
-				        BorderBrush="{StaticResource ControlBrush}"
-				        BorderThickness="1" />
-			<ToggleButton AutomationProperties.AutomationId="toggbutton1">
+			<Border Margin="1,0" BorderBrush="{StaticResource ControlBrush}" BorderThickness="1" />
+			<ToggleButton AutomationProperties.AutomationId="toggbutton1" Style="{StaticResource CheckableToggleButtonStyle}">
 				<DockPanel>
 					<Image Width="16"
 						       Height="16"
@@ -30,10 +35,8 @@
 					</TextBlock>
 				</DockPanel>
 			</ToggleButton>
-			<Border Margin="1,0"
-				        BorderBrush="{StaticResource ControlBrush}"
-				        BorderThickness="1" />
-			<ToggleButton AutomationProperties.AutomationId="toggbutton2" >
+			<Border Margin="1,0" BorderBrush="{StaticResource ControlBrush}" BorderThickness="1" />
+			<ToggleButton AutomationProperties.AutomationId="toggbutton2" Style="{StaticResource CheckableToggleButtonStyle}">
 				<DockPanel>
 					<Image Width="16"
 						       Height="16"
@@ -45,6 +48,9 @@
 				</DockPanel>
 			</ToggleButton>
 		</DockPanel>
+			<DataGrid AutoGenerateColumns="True" x:Name="errorsListGrid" ItemsSource="{Binding ErrorItems}" SelectedItem="{Binding SelectedErrorItem}" BorderThickness="0" BorderBrush="White">
+				
+			</DataGrid>
 	</DockPanel>
 	</Grid>
 </UserControl>

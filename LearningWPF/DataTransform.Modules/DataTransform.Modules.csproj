@@ -114,6 +114,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="..\DDWClient\Theme\Default.xaml">
+      <Link>Theme\Default.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\ErrorListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

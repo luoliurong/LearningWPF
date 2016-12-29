@@ -134,6 +134,10 @@
       <Project>{e3249f2f-22c9-4f7c-8b92-a2fbff182852}</Project>
       <Name>DataTransform.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\library\DataTransform.Resources\DataTransform.Resources.csproj">
+      <Project>{2513c8eb-4fb7-42bd-8fb0-8655aab6b8e6}</Project>
+      <Name>DataTransform.Resources</Name>
+    </ProjectReference>
     <ProjectReference Include="..\library\thirdpart\Prism.Unity.Wpf\Prism.Unity.Wpf.csproj">
       <Project>{c1ce34c7-6ac9-4d54-bad0-8467e9f9f38d}</Project>
       <Name>Prism.Unity.Wpf</Name>

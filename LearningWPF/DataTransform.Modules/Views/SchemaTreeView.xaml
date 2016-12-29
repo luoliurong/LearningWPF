@@ -14,7 +14,7 @@
 			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
 		<Button Grid.Row="0" Content="{Binding Title}" Width="100" Height="30" Click="Button_Click" />
-		<TreeView Grid.Row="1" Name="schemaTree" Margin="5">
+		<TreeView Grid.Row="1" Name="schemaTree" Margin="5" BorderThickness="0,0,0,0">
 			<TreeView.Resources>
 				<HierarchicalDataTemplate DataType="{x:Type local:SchemaTree}" ItemsSource="{Binding Nodes}">
 					<StackPanel Orientation="Horizontal">
