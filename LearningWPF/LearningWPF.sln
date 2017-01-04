@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Unity.Wpf", "library\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTransform.Resources", "library\DataTransform.Resources\DataTransform.Resources.csproj", "{2513C8EB-4FB7-42BD-8FB0-8655AAB6B8E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ron.WPF", "D:\Projects\Personal\Ron.WPF\Ron.WPF.csproj", "{2B6E5EAC-35A0-42BC-A7E1-7CFB4FF59FCE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ron.WPF", "library\Ron.WPF\Ron.WPF.csproj", "{2B6E5EAC-35A0-42BC-A7E1-7CFB4FF59FCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
