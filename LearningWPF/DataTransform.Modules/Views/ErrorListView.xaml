@@ -18,7 +18,7 @@
 	<DockPanel>
 		<DockPanel DockPanel.Dock="Top" LastChildFill="False">
 			<ComboBox x:Name="cmbErrorFilter" Style="{StaticResource ComboBoxFlatStyle}">
-				<ComboBoxItem IsSelected="True">Item 1</ComboBoxItem>
+				<ComboBoxItem IsSelected="True">All Transformations</ComboBoxItem>
 				<ComboBoxItem>Item 2</ComboBoxItem>
 				<ComboBoxItem>Item 3</ComboBoxItem>
 				<ComboBoxItem>Item 4</ComboBoxItem>
