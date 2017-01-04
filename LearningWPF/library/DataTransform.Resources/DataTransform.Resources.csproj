@@ -45,6 +45,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DisplayText.resx</DependentUpon>
     </Compile>
+    <Compile Include="Images\ImageUris.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -16,20 +16,23 @@
 	</i:Interaction.Triggers>
     <Grid>
 		<Menu>
-			<MenuItem Header="Repository" Height="30" VerticalAlignment="Center">
-				<MenuItem AutomationProperties.AutomationId="MenuItem_NewRepository" Header="New" x:Name="mNewRepository" Command="{Binding RaiseNewRepositoryCommand}" FontSize="12">
+			<MenuItem Header="Repository" Height="30" VerticalAlignment="Center"  >
+				<MenuItem AutomationProperties.AutomationId="MenuItem_NewRepository" Header="New" x:Name="mNewRepository" Command="{Binding RaiseNewRepositoryCommand}"  >
 
 				</MenuItem>
-				<MenuItem Command="{Binding RaiseNewRepositoryCommand}" Name="Connect" Header="Connect" />
+				<MenuItem Command="{Binding RaiseNewRepositoryCommand}" Name="Connect" Header="Connect"   />
 			</MenuItem>
-			<MenuItem Header="Schema">
-				<MenuItem Command="{Binding LoadSchemaCommand}" Name="Load" Header="Load" />
-				<MenuItem Command="Copy" Name="Copy" />
-				<MenuItem Command="Paste" Name="Paste" />
+			<MenuItem Header="Schema"  >
+				<MenuItem Command="{Binding LoadSchemaCommand}" Name="Load" Header="Load"   />
+				<MenuItem Command="Copy" Name="Copy"   />
+				<MenuItem Command="Paste" Name="Paste"   />
 			</MenuItem>
-			<MenuItem Header="Transformation">
-				<MenuItem Command="{Binding RaiseNewRepositoryCommand}" Name="New" Header="New" />
-				<MenuItem Command="Delete" Name="Delete" />
+			<MenuItem Header="Transformation"  >
+				<MenuItem Command="{Binding RaiseNewRepositoryCommand}" Name="New" Header="New"   />
+				<MenuItem Command="Delete" Name="Delete"   />
+			</MenuItem>
+			<MenuItem Header="Help"  >
+				<MenuItem Command="{Binding RaiseAboutCommand}" Name="About" Header="About"  />
 			</MenuItem>
 		</Menu>
 	</Grid>

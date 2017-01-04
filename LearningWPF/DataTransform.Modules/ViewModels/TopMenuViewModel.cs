@@ -26,5 +26,10 @@ namespace DataTransform.Modules.ViewModels
 				new Notification { Content = "Notification Message", Title = "Notification" }
 				);
 		}
+
+		public void RaiseAboutCommandNotification()
+		{
+
+		}
 	}
 }

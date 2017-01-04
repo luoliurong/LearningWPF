@@ -1,7 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:sys="clr-namespace:System;assembly=System"
-					xmlns:theme="clr-namespace:DataTransform.Theme">
+					xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+					>
 	<!--Global styles starts-->
 	<SolidColorBrush x:Key="WindowBgBrush">White</SolidColorBrush>
 	<SolidColorBrush x:Key="MainWindowBgBrush">#647180</SolidColorBrush>
@@ -11,6 +12,16 @@
 	<SolidColorBrush x:Key="ToolBarButtonHover" Color="#FFEEC2" />
 	<SolidColorBrush x:Key="ToolBarButtonBorder" Color="#3399ff" />
 	<SolidColorBrush x:Key="UncheckedFontBrush">#7a7a7a</SolidColorBrush>
+	<SolidColorBrush x:Key="LightBackground" Color="#2D2D30" />
+	<SolidColorBrush x:Key="Foreground" options:Freeze="True" Color="#FFFFFF" />
+	<SolidColorBrush x:Key="BackgroundSelected" options:Freeze="True" Color="#007ACC" />
+	<!--  Menu  -->
+	<SolidColorBrush x:Key="MenuSeparatorBorderBrush" options:Freeze="True" Color="#333337" />
+	<SolidColorBrush x:Key="MenuItemHighlightedBackground" options:Freeze="True" Color="#3E3E40" />
+	<SolidColorBrush x:Key="SubmenuItemBackground" options:Freeze="True" Color="#1B1B1C" />
+	<SolidColorBrush x:Key="SubmenuItemBackgroundHighlighted" options:Freeze="True" Color="#333334" />
+	<SolidColorBrush x:Key="MenuDisabledForeground" options:Freeze="True" Color="#656565" />
+	
 	<LinearGradientBrush x:Key="SelectedErrorListViewHeaderBgBrush" StartPoint="0,0" EndPoint="0,1">
 		<GradientStop Color="#FF4DC9EC" Offset="0"/>
 		<GradientStop Color="#FF4DC9EC" Offset="0.15"/>
@@ -207,6 +218,7 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
+	
 	<!--style of elements ends-->
 
 	<!--Image resources starts-->

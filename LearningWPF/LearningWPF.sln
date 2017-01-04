@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "library", "library", "{B6D83159-A8B2-4557-94DF-F39DFD45DEB8}"
 EndProject
@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTransform.Common", "lib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xceed.Wpf.AvalonDock", "library\thirdpart\Xceed.Wpf.AvalonDock\Xceed.Wpf.AvalonDock.csproj", "{DB81988F-E0F2-45A0-A1FD-8C37F3D35244}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTransform", "DDWClient\DataTransform.csproj", "{C78F1DF5-1ED7-47AA-B530-52B9599CEB66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTransform", "DataTransform\DataTransform.csproj", "{C78F1DF5-1ED7-47AA-B530-52B9599CEB66}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Wpf", "library\thirdpart\Prism.Wpf\Prism.Wpf.csproj", "{5912FF03-C72B-4F56-BAA1-8642FDBFBC26}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Unity.Wpf", "library\thirdpart\Prism.Unity.Wpf\Prism.Unity.Wpf.csproj", "{C1CE34C7-6AC9-4D54-BAD0-8467E9F9F38D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTransform.Resources", "library\DataTransform.Resources\DataTransform.Resources.csproj", "{2513C8EB-4FB7-42BD-8FB0-8655AAB6B8E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ron.WPF", "D:\Projects\Personal\Ron.WPF\Ron.WPF.csproj", "{2B6E5EAC-35A0-42BC-A7E1-7CFB4FF59FCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,6 +78,12 @@ Global
 		{2513C8EB-4FB7-42BD-8FB0-8655AAB6B8E6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2513C8EB-4FB7-42BD-8FB0-8655AAB6B8E6}.Test|Any CPU.ActiveCfg = Release|Any CPU
 		{2513C8EB-4FB7-42BD-8FB0-8655AAB6B8E6}.Test|Any CPU.Build.0 = Release|Any CPU
+		{2B6E5EAC-35A0-42BC-A7E1-7CFB4FF59FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B6E5EAC-35A0-42BC-A7E1-7CFB4FF59FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B6E5EAC-35A0-42BC-A7E1-7CFB4FF59FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B6E5EAC-35A0-42BC-A7E1-7CFB4FF59FCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B6E5EAC-35A0-42BC-A7E1-7CFB4FF59FCE}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{2B6E5EAC-35A0-42BC-A7E1-7CFB4FF59FCE}.Test|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,5 +96,6 @@ Global
 		{F1A0FC60-166E-41EE-BCBF-94AFE2224687} = {B6D83159-A8B2-4557-94DF-F39DFD45DEB8}
 		{C1CE34C7-6AC9-4D54-BAD0-8467E9F9F38D} = {B6D83159-A8B2-4557-94DF-F39DFD45DEB8}
 		{2513C8EB-4FB7-42BD-8FB0-8655AAB6B8E6} = {B6D83159-A8B2-4557-94DF-F39DFD45DEB8}
+		{2B6E5EAC-35A0-42BC-A7E1-7CFB4FF59FCE} = {B6D83159-A8B2-4557-94DF-F39DFD45DEB8}
 	EndGlobalSection
 EndGlobal

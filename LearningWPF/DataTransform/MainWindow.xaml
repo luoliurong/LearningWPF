@@ -1,0 +1,82 @@
+﻿<controls:MetroWindow x:Class="DataTransform.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:xced ="http://schemas.xceed.com/wpf/xaml/avalondock"
+		xmlns:local="clr-namespace:DataTransform"
+		xmlns:controls="clr-namespace:Ron.WPF.Controls;assembly=Ron.WPF"
+		xmlns:prism="http://prismlibrary.com/"
+		mc:Ignorable="d"
+		WindowState="Maximized"
+		BorderBrush="{DynamicResource AccentColorBrush}"
+		Title="Data Transform" Height="480" Width="700" Closed="Window_Closed">
+	<Window.CommandBindings>
+		<CommandBinding Command="ApplicationCommands.New" Executed="CommandBinding_Executed"/>
+	</Window.CommandBindings>
+	<Grid x:Name="MainGrid">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<StackPanel Grid.Row="0">
+			<ContentControl prism:RegionManager.RegionName="TopMenuRegion" />
+		</StackPanel>
+
+		<xced:DockingManager x:Name="dockManager"
+							 Grid.Row="1"
+							 AllowMixedOrientation="True"
+							 AnchorablesSource="{Binding DockablePanelViewModel}"
+							 Background="{StaticResource MainWindowBgBrush}"
+							 GridSplitterHeight="1"
+							 GridSplitterWidth="1"
+							 OnDocumentPanelCreated="OnDocumentPanelCreated"
+							 PanelBorderBrush="{StaticResource DockBorderBrush}"
+							 PanelBorderThickness="1"
+							 PreviewMouseDown="PreviewMouseDown">
+			<xced:DockingManager.Theme>
+				<xced:GenericTheme />
+			</xced:DockingManager.Theme>
+			<xced:DockingManager.DocumentHeaderTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal">
+						<Image Source="{Binding IconSource}" Margin="0,0,4,0"/>
+						<TextBlock Text="{Binding Title}" TextTrimming="CharacterEllipsis"/>
+					</StackPanel>
+				</DataTemplate>
+			</xced:DockingManager.DocumentHeaderTemplate>
+			<xced:LayoutRoot x:Name="PART_LayoutRoot">
+				<xced:LayoutPanel Orientation="Vertical">
+					<xced:LayoutPanel Orientation="Horizontal" DockMinHeight="300">
+						<xced:LayoutAnchorablePane DockWidth="332">
+							<xced:LayoutAnchorable CanHide="False" AutoHideMinWidth="300" AutoHideMinHeight="300" Title="Schema View" IsSelected="True" ContentId="SchemaTreeView" CanClose="False" LastActivationTimeStamp="11/14/2014 11:01:31">
+								<ContentControl prism:RegionManager.RegionName="SchemaTreeRegion" />
+							</xced:LayoutAnchorable>
+							<xced:LayoutAnchorable CanHide="False" AutoHideMinWidth="300" AutoHideMinHeight="300" Title="Transformation View" ContentId="TransformationTreeView" CanClose="False" LastActivationTimeStamp="11/14/2014 11:01:30">
+								<ContentControl prism:RegionManager.RegionName="TransformationTreeRegion" />
+							</xced:LayoutAnchorable>
+						</xced:LayoutAnchorablePane>
+						<xced:LayoutDocumentPane DockWidth="0.668635875402793*"/>
+						<xced:LayoutAnchorablePaneGroup Orientation="Vertical" DockWidth="335">
+							<xced:LayoutAnchorablePaneGroup Orientation="Horizontal" FloatingWidth="300" FloatingHeight="937" FloatingLeft="1620" FloatingTop="517">
+								<xced:LayoutAnchorablePane FloatingWidth="300" FloatingHeight="937" FloatingLeft="1620" FloatingTop="517">
+									<xced:LayoutAnchorable CanHide="False" AutoHideMinWidth="300" AutoHideMinHeight="300" Title="Properties" IsSelected="True" ContentId="Properties" FloatingLeft="1020" FloatingTop="50" FloatingWidth="300" FloatingHeight="517" CanClose="False" LastActivationTimeStamp="11/06/2013 14:09:19" PreviousContainerIndex="4" />
+								</xced:LayoutAnchorablePane>
+							</xced:LayoutAnchorablePaneGroup>
+							<xced:LayoutAnchorablePane DockWidth="288" FloatingWidth="300" FloatingHeight="937" FloatingLeft="1589" FloatingTop="519">
+								<xced:LayoutAnchorable CanHide="False" AutoHideMinWidth="300" AutoHideMinHeight="300" Title="Info Pane" IsSelected="True" ContentId="InfoPane" FloatingLeft="1020" FloatingTop="350" FloatingWidth="300" FloatingHeight="517" CanClose="False" LastActivationTimeStamp="11/14/2014 11:01:22" PreviousContainerIndex="5" />
+							</xced:LayoutAnchorablePane>
+						</xced:LayoutAnchorablePaneGroup>
+					</xced:LayoutPanel>
+					<xced:LayoutPanel Orientation="Horizontal" DockMinHeight="200">
+						<xced:LayoutAnchorablePane>
+							<xced:LayoutAnchorable CanHide="False" CanAutoHide="True" AutoHideHeight="150" AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Error List" IsSelected="True" ContentId="ErrorList" FloatingLeft="50" FloatingTop="400" FloatingWidth="1100" FloatingHeight="100" CanClose="False" LastActivationTimeStamp="11/06/2013 14:09:32" PreviousContainerIndex="2">
+								<ContentControl prism:RegionManager.RegionName="ErrorListRegion"/>
+							</xced:LayoutAnchorable>
+						</xced:LayoutAnchorablePane>
+					</xced:LayoutPanel>
+				</xced:LayoutPanel>
+			</xced:LayoutRoot>
+		</xced:DockingManager>
+	</Grid>
+</controls:MetroWindow>

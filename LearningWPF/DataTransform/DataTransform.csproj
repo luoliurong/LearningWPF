@@ -154,6 +154,10 @@
       <Project>{db81988f-e0f2-45a0-a1fd-8c37f3d35244}</Project>
       <Name>Xceed.Wpf.AvalonDock</Name>
     </ProjectReference>
+    <ProjectReference Include="D:\Projects\Personal\Ron.WPF\Ron.WPF.csproj">
+      <Project>{2b6e5eac-35a0-42bc-a7e1-7cfb4ff59fce}</Project>
+      <Name>Ron.WPF</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModel\" />
