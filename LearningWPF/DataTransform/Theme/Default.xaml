@@ -168,6 +168,7 @@
 	<Style x:Key="CheckableToggleButtonStyle" TargetType="{x:Type Control}">
 		<Setter Property="Foreground" Value="{StaticResource UncheckedFontBrush}" />
 		<Setter Property="Padding" Value="2" />
+		<Setter Property="Height" Value="32" />
 		<Setter Property="BorderThickness" Value="1" />
 		<Setter Property="Background" Value="Transparent" />
 		<Setter Property="BorderBrush" Value="Transparent" />
@@ -180,8 +181,8 @@
 				<ControlTemplate TargetType="{x:Type ToggleButton}">
 					<Border Name="bd"
                             Background="{TemplateBinding Background}"
-					        BorderBrush="{StaticResource ToolBarButtonBorder}"
-					        BorderThickness="0"
+					        BorderBrush="LightGray"
+					        BorderThickness="0 1 1 1"
 					        Padding="{TemplateBinding Padding}"
 					        SnapsToDevicePixels="true">
 						<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
@@ -193,6 +194,7 @@
 							<Setter Property="Background" Value="{StaticResource SelectedErrorListViewHeaderBgBrush}" />
 							<Setter Property="Margin" Value="0,-1,0,0" />
 							<Setter Property="Padding" Value="4,3,4,5" />
+							<Setter Property="BorderThickness" Value="0 0 1 0" TargetName="bd"/>
 						</Trigger>
 						<Trigger Property="IsEnabled" Value="false">
 							<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
@@ -211,7 +213,7 @@
 								<Condition Property="IsMouseOver" Value="true"></Condition>
 								<Condition Property="IsChecked" Value="false"></Condition>
 							</MultiTrigger.Conditions>
-							<Setter Property="Background" Value="{StaticResource ToolBarButtonHover}" />
+							<Setter Property="Background" Value="#EAEAEA" />
 						</MultiTrigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>

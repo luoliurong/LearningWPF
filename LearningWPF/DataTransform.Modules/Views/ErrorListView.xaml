@@ -17,40 +17,49 @@
 	<Grid>
 	<DockPanel>
 		<DockPanel DockPanel.Dock="Top" LastChildFill="False">
-			<ComboBox x:Name="cmbErrorFilter" Style="{StaticResource ComboBoxFlatStyle}">
-				<ComboBoxItem IsSelected="True">All Transformations</ComboBoxItem>
-				<ComboBoxItem>Item 2</ComboBoxItem>
-				<ComboBoxItem>Item 3</ComboBoxItem>
-				<ComboBoxItem>Item 4</ComboBoxItem>
-			</ComboBox>
-			<Border Margin="1,0" BorderBrush="{StaticResource ControlBrush}" BorderThickness="1" />
 			<ToggleButton AutomationProperties.AutomationId="toggbutton1" Style="{StaticResource CheckableToggleButtonStyle}">
 				<DockPanel>
 					<Image Width="16"
-						       Height="16"
-						       Margin="0,0,2,0"
-						       Source="{StaticResource ErrorIconImage}" />
+						Height="16"
+						Margin="0,0,2,0"
+						Source="{StaticResource ErrorIconImage}" />
 					<TextBlock AutomationProperties.AutomationId="txtbox1">
-						Errors : 12
+				All Alerts : 20
 					</TextBlock>
 				</DockPanel>
 			</ToggleButton>
-			<Border Margin="1,0" BorderBrush="{StaticResource ControlBrush}" BorderThickness="1" />
+			<ToggleButton AutomationProperties.AutomationId="toggbutton1" Style="{StaticResource CheckableToggleButtonStyle}">
+				<DockPanel>
+					<Image Width="16"
+						    Height="16"
+						    Margin="0,0,2,0"
+						    Source="{StaticResource ErrorIconImage}" />
+					<TextBlock AutomationProperties.AutomationId="txtbox1">
+					Errors : 12
+					</TextBlock>
+				</DockPanel>
+			</ToggleButton>
 			<ToggleButton AutomationProperties.AutomationId="toggbutton2" Style="{StaticResource CheckableToggleButtonStyle}">
 				<DockPanel>
 					<Image Width="16"
-						       Height="16"
-						       Margin="0,0,2,0"
-						       Source="{StaticResource WarningIconImage}" />
+						Height="16"
+						Margin="0,0,2,0"
+						Source="{StaticResource WarningIconImage}" />
 					<TextBlock AutomationProperties.AutomationId="txtbox2">
 						Warnings : 8
 					</TextBlock>
 				</DockPanel>
 			</ToggleButton>
+			<ComboBox x:Name="cmbErrorFilter" Style="{StaticResource ComboBoxFlatStyle}" MinHeight="120">
+				<ComboBoxItem IsSelected="True">All Transformations</ComboBoxItem>
+				<ComboBoxItem>Item 2</ComboBoxItem>
+				<ComboBoxItem>Item 3</ComboBoxItem>
+				<ComboBoxItem>Item 4</ComboBoxItem>
+			</ComboBox>
 		</DockPanel>
-			<DataGrid AutoGenerateColumns="True" x:Name="errorsListGrid" ItemsSource="{Binding ErrorItems}" SelectedItem="{Binding SelectedErrorItem}" BorderThickness="0" BorderBrush="White">
+		<DataGrid AutoGenerateColumns="True" x:Name="errorsListGrid" ItemsSource="{Binding ErrorItems}" SelectedItem="{Binding SelectedErrorItem}" BorderThickness="0" BorderBrush="White">
 				
-			</DataGrid>
+		</DataGrid>
 	</DockPanel>
 	</Grid>
 </UserControl>
