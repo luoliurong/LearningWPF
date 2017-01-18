@@ -73,6 +73,9 @@
     <Compile Include="ViewModels\ErrorListViewModel.cs" />
     <Compile Include="ViewModels\SchemaTreeViewModel.cs" />
     <Compile Include="ViewModels\TopMenuViewModel.cs" />
+    <Compile Include="Views\CustomPopupView.xaml.cs">
+      <DependentUpon>CustomPopupView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ErrorListView.xaml.cs">
       <DependentUpon>ErrorListView.xaml</DependentUpon>
     </Compile>
@@ -104,6 +107,10 @@
       <Project>{2513c8eb-4fb7-42bd-8fb0-8655aab6b8e6}</Project>
       <Name>DataTransform.Resources</Name>
     </ProjectReference>
+    <ProjectReference Include="..\library\Ron.WPF\Ron.WPF.csproj">
+      <Project>{2b6e5eac-35a0-42bc-a7e1-7cfb4ff59fce}</Project>
+      <Name>Ron.WPF</Name>
+    </ProjectReference>
     <ProjectReference Include="..\library\thirdpart\Prism.Wpf\Prism.Wpf.csproj">
       <Project>{5912ff03-c72b-4f56-baa1-8642fdbfbc26}</Project>
       <Name>Prism.Wpf</Name>
@@ -118,6 +125,10 @@
       <Link>Theme\Default.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CustomPopupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ErrorListView.xaml">
       <SubType>Designer</SubType>

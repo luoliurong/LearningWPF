@@ -6,15 +6,43 @@
 		xmlns:xced ="http://schemas.xceed.com/wpf/xaml/avalondock"
 		xmlns:local="clr-namespace:DataTransform"
 		xmlns:controls="clr-namespace:Ron.WPF.Controls;assembly=Ron.WPF"
+		xmlns:rs="clr-namespace:DataTransform.Resources.Images;assembly=DataTransform.Resources"
 		xmlns:prism="http://prismlibrary.com/"
 		mc:Ignorable="d"
 		WindowState="Maximized"
+		Icon="datatransform.ico"
+		ShowIconOnTitleBar="True"
+		ShowTitleBar="True"
+		WindowStartupLocation="CenterScreen"
 		BorderBrush="{DynamicResource AccentColorBrush}"
 		Title="Data Transform" Height="480" Width="700" Closed="Window_Closed">
 	<Window.CommandBindings>
 		<CommandBinding Command="ApplicationCommands.New" Executed="CommandBinding_Executed"/>
 	</Window.CommandBindings>
-	<Grid x:Name="MainGrid">
+	<controls:MetroWindow.RightWindowCommands>
+		<controls:WindowCommands ShowLastSeparator="False">
+			<Button Content="VS"
+                    ToolTip="Visual Studio style demo" />
+			<Button Content="Flyouts"
+                    ToolTip="Flyouts demo window" />
+			<Button Content="Icons"
+                    ToolTip="All MahApp icons" />
+			<Button Content="Clean"
+                    ToolTip="Clean window style demo" />
+			<Button Content="Interop"
+                    ToolTip="The interop demo" />
+			<Button Content="Navigation"
+                    ToolTip="Window navigation demo" />
+			<ToggleButton x:Name="MagicToggleButton"
+                          Content="ToggleButton"
+                          IsChecked="{Binding MagicToggleButtonIsChecked}"
+                          ToolTip="Shows the toggle button magic" />
+			<ToggleButton Content="Confirm quit"
+                          IsChecked="{Binding QuitConfirmationEnabled}"
+                          ToolTip="Enable quit confirmation dialog on exit" />
+		</controls:WindowCommands>
+	</controls:MetroWindow.RightWindowCommands>
+	<Grid x:Name="MainGrid" Margin="0">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="auto"/>
 			<RowDefinition Height="*"/>
