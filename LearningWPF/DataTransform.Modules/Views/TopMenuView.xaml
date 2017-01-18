@@ -15,7 +15,7 @@
 		</prism:InteractionRequestTrigger>
 	</i:Interaction.Triggers>
     <Grid>
-		<Menu Margin="0 2 0 2" Background="#EAEAEA">
+		<Menu Margin="0 2 0 2" Background="DarkGray">
 			<MenuItem Header="Repository" Height="30" VerticalAlignment="Center"  >
 				<MenuItem AutomationProperties.AutomationId="MenuItem_NewRepository" Header="New" x:Name="mNewRepository" Command="{Binding RaiseNewRepositoryCommand}"  >
 

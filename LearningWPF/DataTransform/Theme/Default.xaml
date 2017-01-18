@@ -102,6 +102,7 @@
 		<Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
 		<Setter Property="TextElement.Foreground" Value="Black"/>
 		<Setter Property="FrameworkElement.FocusVisualStyle" Value="{x:Null}"/>
+		<Setter Property="MinWidth" Value="120" />
 		<Setter Property="Control.Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="ComboBox">
@@ -111,12 +112,12 @@
                 IsChecked="{Binding Path=IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
                 Template="{StaticResource ComboBoxToggleButtonTemplate}"/>
 
-						<ContentPresenter Name="ContentSite" Margin="5, 3, 23, 3" IsHitTestVisible="False"
+						<ContentPresenter Name="ContentSite" Margin="3, 1, 23, 1" IsHitTestVisible="False"
                               HorizontalAlignment="Left" VerticalAlignment="Center"                              
                               Content="{TemplateBinding ComboBox.SelectionBoxItem}" 
                               ContentTemplate="{TemplateBinding ComboBox.SelectionBoxItemTemplate}"
                               ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"/>
-						<TextBox Name="PART_EditableTextBox" Margin="3, 3, 23, 3"                     
+						<TextBox Name="PART_EditableTextBox" Margin="1, 1, 23, 1"                     
                      IsReadOnly="{TemplateBinding IsReadOnly}"
                      Visibility="Hidden" Background="Transparent"
                      HorizontalAlignment="Left" VerticalAlignment="Center"
@@ -193,7 +194,7 @@
 						<Trigger Property="IsChecked" Value="true">
 							<Setter Property="Background" Value="{StaticResource SelectedErrorListViewHeaderBgBrush}" />
 							<Setter Property="Margin" Value="0,-1,0,0" />
-							<Setter Property="Padding" Value="4,3,4,5" />
+							<Setter Property="Padding" Value="2,3,2,5" />
 							<Setter Property="BorderThickness" Value="0 0 1 0" TargetName="bd"/>
 						</Trigger>
 						<Trigger Property="IsEnabled" Value="false">
@@ -206,7 +207,7 @@
 							</MultiTrigger.Conditions>
 							<Setter Property="Background" Value="{StaticResource SelectedErrorListViewHeaderBgBrush}" />
 							<Setter Property="Margin" Value="0,-1,0,0" />
-							<Setter Property="Padding" Value="4,3,4,5" />
+							<Setter Property="Padding" Value="2,3,2,5" />
 						</MultiTrigger>
 						<MultiTrigger>
 							<MultiTrigger.Conditions>

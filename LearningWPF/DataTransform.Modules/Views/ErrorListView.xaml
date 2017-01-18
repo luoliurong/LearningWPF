@@ -17,6 +17,12 @@
 	<Grid>
 	<DockPanel>
 		<DockPanel DockPanel.Dock="Top" LastChildFill="False">
+			<ComboBox x:Name="cmbErrorFilter" Style="{StaticResource ComboBoxFlatStyle}">
+				<ComboBoxItem IsSelected="True">All Transformations</ComboBoxItem>
+				<ComboBoxItem>Item 2</ComboBoxItem>
+				<ComboBoxItem>Item 3</ComboBoxItem>
+				<ComboBoxItem>Item 4</ComboBoxItem>
+			</ComboBox>
 			<ToggleButton AutomationProperties.AutomationId="toggbutton1" Style="{StaticResource CheckableToggleButtonStyle}">
 				<DockPanel>
 					<Image Width="16"
@@ -50,12 +56,6 @@
 					</TextBlock>
 				</DockPanel>
 			</ToggleButton>
-			<ComboBox x:Name="cmbErrorFilter" Style="{StaticResource ComboBoxFlatStyle}" MinHeight="120">
-				<ComboBoxItem IsSelected="True">All Transformations</ComboBoxItem>
-				<ComboBoxItem>Item 2</ComboBoxItem>
-				<ComboBoxItem>Item 3</ComboBoxItem>
-				<ComboBoxItem>Item 4</ComboBoxItem>
-			</ComboBox>
 		</DockPanel>
 		<DataGrid AutoGenerateColumns="True" x:Name="errorsListGrid" ItemsSource="{Binding ErrorItems}" SelectedItem="{Binding SelectedErrorItem}" BorderThickness="0" BorderBrush="White">
 				
